@@ -63,19 +63,11 @@ class VendorOrdersApi
      */
     protected $headerSelector;
 
-    /**
-     * @param ClientInterface $client
-     * @param Configuration   $config
-     * @param HeaderSelector  $selector
-     */
-    public function __construct(
-        ClientInterface $client = null,
-        Configuration $config = null,
-        HeaderSelector $selector = null
-    ) {
-        $this->client = $client ?: new Client();
-        $this->config = $config ?: new Configuration();
-        $this->headerSelector = $selector ?: new HeaderSelector();
+    public function __construct(Configuration $config)
+    {
+        $this->client = new Client();
+        $this->config = $config;
+        $this->headerSelector = new HeaderSelector();
     }
 
     /**
