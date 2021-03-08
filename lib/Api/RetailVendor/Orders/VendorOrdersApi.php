@@ -1,4 +1,4 @@
-    <?php
+<?php
 /**
  * VendorOrdersApi
  * PHP version 5
